@@ -160,6 +160,9 @@ var MapRegionExample = React.createClass({
           onChange={this._onRegionInputChanged}
           region={this.state.mapRegionInput || undefined}
         />
+        <TextInput
+    style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+  />
       </View>
     );
   },
@@ -222,7 +225,7 @@ var styles = StyleSheet.create({
     marginTop: 5,
     padding: 3,
     borderWidth: 0.5,
-    borderColor: '#777777',
+    borderColor: 'blue',
   },
 });
 
@@ -242,12 +245,12 @@ exports.examples = [
   }
 ];
 
-// MapView.js
-
-var { requireNativeComponent } = require('react-native');
-
-// requireNativeComponent automatically resolves this to "RCTMapManager"
-module.exports = requireNativeComponent('RCTMap', null);
+// // MapView.js
+//
+// var { requireNativeComponent } = require('react-native');
+//
+// // requireNativeComponent automatically resolves this to "RCTMapManager"
+// module.exports = requireNativeComponent('RCTMap', null);
 
 
 AppRegistry.registerComponent('reactAppDavid1', () => MapRegionExample);
